@@ -43,10 +43,20 @@
 			font-size: 1.5em;
 			letter-spacing: -0.5px;
 			color: #777;
+			margin-bottom: -1.4em;
+			margin-top: 1.5em;
 		}
 		thead {
 			font-size: 1.1em;
 			color: #3385cc;
+		}
+		tbody::before {
+			content: '';
+			display: block;
+			margin-top: 1em;
+		}
+		tbody tr:nth-of-type(odd) {
+			background: #eee;
 		}
 		thead > tr:nth-of-type(odd) {
 			background: transparent;
@@ -57,15 +67,16 @@
 		}
 		@media (min-width: 800px) {
 			tr > td:first-child {
-				width: 25ch;
+				width: 45ch;
 				font-size: 18px;
 			}
 			thead tr > td {
 				padding: .5em .75em;
 			}
-		}
-		tbody tr:nth-of-type(odd) {
-			background: #eee;
+			tr > td[colspan="3"] div{
+				max-width: 80%;
+				margin: 0 auto;
+			}
 		}
 		.yes,
 		.no {
@@ -92,16 +103,19 @@
 		}
 		#totals td {
 			color: tomato;
+			padding-top: 1em;
 		}
 		@media (max-width: 800px) {
-			td:empty {
-				display: none !important;
-			}
 			body {
 				padding: .25em;
 			}
 			h1 {
 				padding-left: .5rem;
+				margin-bottom: 1em;
+				margin-top: .5em;
+			}
+			table {
+				max-width: 100%;
 			}
 			thead,
 			tfoot {
@@ -130,6 +144,9 @@
 				margin: 0 auto;
 				opacity: .5;
 			}
+			td:empty {
+				display: none !important;
+			}
 			thead tr > td,
 			tfoot tr > td {
 				padding-top: .5em;
@@ -144,6 +161,9 @@
 			}
 			tr > td[colspan="2"] {
 				width: 50%;
+			}
+			tr > td[colspan="3"] {
+				width: 75%;
 			}
 			tr > td:first-child {
 				width: 100%;
@@ -187,10 +207,10 @@
 			<thead>
 				<tr>
 					<td></td>
-					<td>Package 1</td>
-					<td>Package 2</td>
-					<td>Package 3</td>
-					<td>Package 4</td>
+					<td>Budget Package</td>
+					<td>Starter Package</td>
+					<td>Standard Package</td>
+					<td>Advanced Package</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -202,17 +222,17 @@
 					<td><span class="yes"></span></td>
 				</tr>
 				<tr>
+					<td>Domain name and website hosting</td>
+					<td><span class="yes"></span></td>
+					<td><span class="yes"></span></td>
+					<td colspan="2">Register up to 3 domains to ensure your customers are always able to find you</td>
+				</tr>
+				<tr>
 					<td>Webpages included</td>
 					<td>Single page website</td>
 					<td>5 pages</td>
 					<td>10 pages</td>
 					<td>20 pages</td>
-				</tr>
-				<tr>
-					<td>Domain name and website hosting</td>
-					<td><span class="yes"></span></td>
-					<td><span class="yes"></span></td>
-					<td colspan="2">Register up to 3 domains to ensure your customers are always able to find you</td>
 				</tr>
 				<tr>
 					<td>Website content</td>
@@ -231,16 +251,17 @@
 				<tr>
 					<td>SEO, content and effectivness review</td>
 					<td><span class="no"></span></td>
-					<td>1 Annual review</td>
-					<td>2 Bi-annual reviews</td>
-					<td>4 Quarterly reviews</td>
+					<td>(1) Annual review</td>
+					<td>(2) Bi-annual reviews</td>
+					<td>(4) Quarterly reviews</td>
 				</tr>
 				<tr>
 					<td>Website design</td>
-					<td><span class="no"></span></td>
-					<td><span class="no"></span></td>
-					<td><span class="no"></span></td>
-					<td>Custom website design</td>
+					<!-- <td colspan="3">Choose from template websites, customized for your branding</td> -->
+					<td>Template</td>
+					<td>Template</td>
+					<td>Template</td>
+					<td>Fully customized website design</td>
 				</tr>
 			</tbody>
 			<tfoot>
