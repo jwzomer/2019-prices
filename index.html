@@ -40,7 +40,7 @@
 			font-weight: bold;
 		}
 		h1 {
-			font-size: 1.7em;
+			font-size: 1.5em;
 			letter-spacing: -0.5px;
 			color: #777;
 		}
@@ -51,24 +51,18 @@
 		thead > tr:nth-of-type(odd) {
 			background: transparent;
 		}
-		td:empty {
-			display: none !important;
-		}
 		tr > td {
 			width: calc(650px / 4);
 			padding: 1.4em .75em;
 		}
-		tr > td:first-child {
-			width: 25ch;
-			font-size: 18px;
-		}
 		@media (min-width: 800px) {
+			tr > td:first-child {
+				width: 25ch;
+				font-size: 18px;
+			}
 			thead tr > td {
 				padding: .5em .75em;
 			}
-		}
-		tbody td > div {
-			min-height: 30px;
 		}
 		tbody tr:nth-of-type(odd) {
 			background: #eee;
@@ -92,7 +86,6 @@
 			display: block;
 			opacity: .65;
 			margin-left: 3ch;
-			margin-top: -0.7em;
 		}
 		tfoot {
 			font-size: 1.3em;
@@ -101,6 +94,9 @@
 			color: tomato;
 		}
 		@media (max-width: 800px) {
+			td:empty {
+				display: none !important;
+			}
 			body {
 				padding: .25em;
 			}
@@ -144,7 +140,7 @@
 				width: 25%;
 				display: inline-block;
 				padding: .5em;
-				margin-bottom: 1.5em;
+				margin-bottom: 2.5em;
 			}
 			tr > td[colspan="2"] {
 				width: 50%;
@@ -152,26 +148,33 @@
 			tr > td:first-child {
 				width: 100%;
 				display: inline-block;
-				font-weight: bold;
-				opacity: .8;
+				/*font-weight: bold;
+				opacity: .8;*/
 				margin-bottom: 0;
+				padding-bottom: .5rem;
 			}
 			tbody td:not(:first-child) {
 				text-align: center;
+				font-size: 14px;
 			}
 			tbody td > div {
 				text-align: left;
 				display: inline-block;
 			}
+			tbody td:first-child > div::after {
+				content: ':';
+				font-size: inherit;
+				display: inline-block;
+			}
 			.yes::after,  
 			.no::after {
 				margin-left: 0;
-				margin-top: 0;
 				font-size: 2rem;
 			} 
 			.no::after {
-				bottom: -.8em;
-				position: relative;
+				/*bottom: -.8em;
+				position: relative;*/
+				/*margin-top: -0.7em;*/
 			}
 			tfoot {
 				bottom: 0;
@@ -200,7 +203,7 @@
 				</tr>
 				<tr>
 					<td>Webpages included</td>
-					<td>Single page website <br>-great for product focused sites! </td>
+					<td>Single page website</td>
 					<td>5 pages</td>
 					<td>10 pages</td>
 					<td>20 pages</td>
