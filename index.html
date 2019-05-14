@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>John Zomer Website Development</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		
+		<!-- Bootstrap 3.3.7 compiled and minified CSS/JS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,700" rel="stylesheet">
+		
+		<!-- Style sheets -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/style.css" />		 -->
+	</head>
+	<style>
+		html {
+			display: flex;
+			min-height: 100%;
+			color: #333;
+		}
+		body {
+			font-size: 16px;
+			font-family: 'Libre Franklin', sans-serif;
+			font-weight: normal;
+			margin: 0 auto;
+			max-width: 1000px;
+			padding: 1em;
+		}
+		h1, thead, #totals {
+			font-weight: bold;
+		}
+		h1 {
+			font-size: 1.7em;
+			letter-spacing: -0.5px;
+			color: #777;
+		}
+		thead {
+			font-size: 1.1em;
+			color: #3385cc;
+		}
+		thead > tr:nth-of-type(odd) {
+			background: transparent;
+		}
+		td:empty {
+			display: none !important;
+		}
+		tr > td {
+			width: calc(650px / 4);
+			padding: 1.4em .75em;
+		}
+		tr > td:first-child {
+			width: 25ch;
+			font-size: 18px;
+		}
+		@media (min-width: 800px) {
+			thead tr > td {
+				padding: .5em .75em;
+			}
+		}
+		tbody td > div {
+			min-height: 30px;
+		}
+		tbody tr:nth-of-type(odd) {
+			background: #eee;
+		}
+		.yes,
+		.no {
+			width: 100%;
+			height: 100%;
+		}
+		.yes::after {
+			content: '✔';
+			font-weight: bold;
+			opacity: .75;
+			margin-left: 3ch;
+		}
+		.no::after {
+			content: '';
+			background-color: currentColor;
+			width: 1em;
+			height: calc(1em / 8);
+			display: block;
+			opacity: .65;
+			margin-left: 3ch;
+			margin-top: -0.7em;
+		}
+		tfoot {
+			font-size: 1.3em;
+		}
+		#totals td {
+			color: tomato;
+		}
+		@media (max-width: 800px) {
+			body {
+				padding: .25em;
+			}
+			h1 {
+				padding-left: .5rem;
+			}
+			thead,
+			tfoot {
+				position: sticky;
+				position: -webkit-sticky;
+				display: inline-block;
+				background: white;
+				width: 100%;
+				z-index: 2;
+			}
+			thead {
+				top: 0;
+			}
+			thead tr,
+			tfoot tr {
+				width: inherit;
+				display: flex;
+			}
+			tbody tr:nth-of-type(odd) {
+				background: transparent;
+			}
+			tbody tr::after {
+				content: '';
+				display: block;
+				width: calc(100% - 1em);
+				margin: 0 auto;
+				opacity: .5;
+			}
+			thead tr > td,
+			tfoot tr > td {
+				padding-top: .5em;
+				padding-bottom: .5em;
+				margin-bottom: 0;
+			}
+			tr > td {
+				width: 25%;
+				display: inline-block;
+				padding: .5em;
+				margin-bottom: 1.5em;
+			}
+			tr > td[colspan="2"] {
+				width: 50%;
+			}
+			tr > td:first-child {
+				width: 100%;
+				display: inline-block;
+				font-weight: bold;
+				opacity: .8;
+				margin-bottom: 0;
+			}
+			tbody td:not(:first-child) {
+				text-align: center;
+			}
+			tbody td > div {
+				text-align: left;
+				display: inline-block;
+			}
+			.yes::after,  
+			.no::after {
+				margin-left: 0;
+				margin-top: 0;
+				font-size: 2rem;
+			} 
+			.no::after {
+				bottom: -.8em;
+				position: relative;
+			}
+			tfoot {
+				bottom: 0;
+			}
+		}
+	</style>
+	<body>
+		<h1>Website Development Packages</h1>
+		<table>
+			<thead>
+				<tr>
+					<td></td>
+					<td>Package 1</td>
+					<td>Package 2</td>
+					<td>Package 3</td>
+					<td>Package 4</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Responsive, mobile friendly website</td>
+					<td><span class="yes"></span></td>
+					<td><span class="yes"></span></td>
+					<td><span class="yes"></span></td>
+					<td><span class="yes"></span></td>
+				</tr>
+				<tr>
+					<td>Webpages included</td>
+					<td>Single page website <br>-great for product focused sites! </td>
+					<td>5 pages</td>
+					<td>10 pages</td>
+					<td>20 pages</td>
+				</tr>
+				<tr>
+					<td>Domain name and website hosting</td>
+					<td><span class="yes"></span></td>
+					<td><span class="yes"></span></td>
+					<td colspan="2">Register up to 3 domains to ensure your customers are always able to find you</td>
+				</tr>
+				<tr>
+					<td>Website content</td>
+					<td><span class="no"></span></td>
+					<td><span class="no"></span></td>
+					<td>Copywriting assistance</td>
+					<td>Content strategy and copywriting</td>
+				</tr>
+				<tr>
+					<td>Communication tools</td>
+					<td>Contact form</td>
+					<td>info@your-domain.com</td>
+					<td>5 domain based email accounts</td>
+					<td>Unlimited domain based email accounts</td>
+				</tr>
+				<tr>
+					<td>SEO, content and effectivness review</td>
+					<td><span class="no"></span></td>
+					<td>1 Annual review</td>
+					<td>2 Bi-annual reviews</td>
+					<td>4 Quarterly reviews</td>
+				</tr>
+				<tr>
+					<td>Website design</td>
+					<td><span class="no"></span></td>
+					<td><span class="no"></span></td>
+					<td><span class="no"></span></td>
+					<td>Custom website design</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr id="totals">
+					<td></td>
+					<td>$2,600</td>
+					<td>$3,500</td>
+					<td>$6,000</td>
+					<td>$13,500</td>
+				</tr>
+			</tfoot>
+		</table>
+		<script>
+			$( "tbody td" ).wrapInner( "<div></div>" );
+		</script>
+	</body>
+</html>
