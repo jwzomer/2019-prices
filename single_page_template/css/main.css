@@ -1,0 +1,638 @@
+/*--------------------------------------------------------
+	FONT ASSIGNMENTS
+--------------------------------------------------------*/
+body {
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+	color: #333333;
+    line-height: normal;
+    scroll-behavior: smooth;
+}
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: .9em;
+}
+
+
+/*--------------------------------------------------------
+	H1 - H6
+--------------------------------------------------------*/
+h1, h2, h3, h4, h5 {
+    font-family: Arial;
+	margin: 0px;
+	padding: 0 0 0.3em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 30px;
+    color: #0A3542;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+h2 {
+    font-size: 26px;
+    color: #0A3542;
+}
+h2 a {
+    text-decoration: none;
+    color: #720101;
+}
+h2 a:hover {
+    text-decoration: none;
+    color: #720101;
+}
+h3 {
+    font-size: 22px;
+    opacity: .9;
+}
+h4 {
+    font-size: 18px;
+    opacity: .9;
+}
+
+/*--------------------------------------------------------
+	LINKS
+--------------------------------------------------------*/
+a {
+	color: #4c7520;
+	font-family: 'Nunito', sans-serif;
+}
+a:hover, a:focus{
+	color: ;
+}
+
+
+/*--------------------------------------------------------
+	IMAGES, Objects
+--------------------------------------------------------*/
+img {
+	border: 0px;
+}
+
+/*--------------------------------------------------------
+						HEADER
+--------------------------------------------------------*/
+
+
+/*--------------------------------------------------------
+	INDEX / MAIN BODY
+--------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------
+	CSS STYLE FOR HOME PAGE CONTENT
+--------------------------------------------------------*/
+
+/*--------------------------------------------------------
+	CSS STYLE FOR INNER PAGES
+--------------------------------------------------------*/
+
+#subpage {
+    min-height: calc(100vh - 194px);
+    padding-bottom: 30px;
+}
+@media (max-width: 767px) {
+    #subpage {
+        padding-top: 30px;
+    }
+}
+
+/*--------------------------------------------------------
+	FOOTER
+--------------------------------------------------------*/
+
+footer {
+    padding: 19px 0px 7px 0px;
+    background: #0A3542;
+}
+footer p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 20px;
+}
+/*@media (max-width: 767px) {
+    footer p {
+        text-align: center;
+    }  
+}*/
+footer p a {
+    color: #fff;
+    text-decoration: underline;
+}
+footer p a:hover {
+    text-decoration: none;
+}
+p.footer-info-right {
+    text-align: right;
+}
+
+
+/*--------------------------------------------------------
+	UTILITIES
+--------------------------------------------------------*/
+
+/*--------------------------------------------------------
+                Conference Page
+--------------------------------------------------------*/
+@media (min-width: 800px) {
+    .two-column-list {
+        -webkit-column-count: 2; 
+        -moz-column-count: 2; 
+        column-count: 2;
+        -webkit-column-gap: 2em; 
+        -moz-column-gap: 2em; 
+        column-gap: 2em;
+    }
+}
+#conference-page {
+    position: relative;
+    /*top: -40px;*/
+}
+.sentence-case {
+    text-transform: none;
+}
+#conference-page-content ul {
+    margin-left: 0;
+    padding-left: 1em;
+}
+
+#conference-resources h4:first-child {
+    margin-bottom: .5em;
+}
+
+#conference-resources ul,
+ul#past-conferences {
+    padding-left: 0;
+    list-style: none;
+}
+#session-topics li,
+#conference-resources li,
+#past-conferences li{
+    margin-bottom: .4em;
+}
+#conference-page-content table {
+    margin: 1em 0 1.5em;
+    border: 1px solid #ddd;
+    max-width: 100%;
+    overflow-x: auto;
+    font-size: .9em;
+    display: block;
+}
+#past-conferences .list-year {
+    color: #0A3342;
+    font-weight: bold;
+}
+#past-conferences li:first-child {
+    color: #4b7520;
+    font-weight: bold;
+}
+#conference-page-content table tr:nth-child(even){
+    background-color: #eee;
+}
+#conference-page-content table td,
+#conference-page-content table th {
+    padding: .5em;
+}
+#conference-page-content table tfoot td{
+    padding-top: 1em;
+}
+#pricing-table {
+    width: 550px;
+}
+/*-------------Conference Menu --------- */
+#conference-menu {
+    position: sticky;
+    margin-left: -200px;
+    top: 60px;
+    height: 0;
+    overflow: visible;
+}
+@media (max-width: 1600px) {
+    #conference-menu {
+        margin-left: -170px;
+    }
+}
+
+#conference-menu a {
+    color: #333;
+}
+#conference-menu .nav > li.active > a::before {
+    content: '';
+    display: inline-block;
+    left: -21px;
+    top: 2px;
+    width: 11px;
+    height: 16px;
+    position: absolute;
+    background: #4C7520;
+}
+#conference-menu .active a {
+    font-weight: bold;
+    color: #4C7520;
+}
+#conference-menu .nav > li > a {
+    display: inline;
+    padding: 0;
+    /*Overwrite Bootstrap styles*/
+}
+#conference-menu .nav>li>a:focus, 
+#conference-menu .nav>li>a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    /*Overwrite Bootstrap styles*/
+}
+@media (max-width: 1570px) {
+    #conference-menu {
+        background: #0A3342;
+        max-height: 0;
+        height: auto;
+        width: 100%;
+        margin: 0;
+        z-index: 20;
+        padding: 0;
+        transition: .125s padding, .125s max-height;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        top: inherit;
+        left: 0;
+    }
+    #conference-menu.show-nav {
+        max-height: 200px;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+    #conference-menu .nav {
+        text-align: center;
+    }
+    #conference-menu li {
+        display: inline-block;
+        margin-left: 2ch;
+    }
+    #conference-menu .nav > li > a {
+        color: white;
+    }
+    #conference-menu .nav>li>a:focus, 
+    #conference-menu .nav>li>a:hover {
+        text-decoration: none;
+    }
+    #conference-menu .nav > li.active > a::before,
+    #conference-menu .nav > li.active > a:hover::before {
+        content: '';
+        display: inline-block;
+        left: inherit;
+        top: 1.3em;
+        width: 100%;
+        height: .25em;
+        position: absolute;
+        background: white;
+    }
+    #conference-menu .nav > li.active > a {
+        color: white;
+    }
+}
+@media (max-width: 990px) {
+    #conference-menu .nav {
+        text-align: left;
+    }
+}
+
+/*-------------Conference Banner--------- */
+#banner {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    max-height: 30vh;
+    min-height: 120px;
+}
+@media(max-width: 990px) {
+    #banner {
+        margin-bottom: 30px;
+        line-height: 2.2;
+    }
+}
+@media(max-width: 600px) {
+    #banner {
+        margin-bottom: 1em;
+    }
+}
+#conference-banner {
+    max-height: 350px;
+    overflow-y: hidden;
+}
+
+#conference-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*z-index: 1;*/
+    opacity: .5;
+    background : -moz-linear-gradient(50% 0% -90deg,rgba(10, 53, 66, 0.5) 0%,rgba(10, 53, 66, 1) 100%);
+    background : -webkit-linear-gradient(-90deg, rgba(10, 53, 66, 0.5) 0%, rgba(10, 53, 66, 1) 100%);
+    background : -webkit-gradient(linear,50% 0% ,50% 100% ,color-stop(0,rgba(10, 53, 66, 0.5) ),color-stop(1,rgba(10, 53, 66, 1) ));
+    background : -o-linear-gradient(-90deg, rgba(10, 53, 66, 0.5) 0%, rgba(10, 53, 66, 1) 100%);
+    background : -ms-linear-gradient(-90deg, rgba(10, 53, 66, 0.5) 0%, rgba(10, 53, 66, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A3542', endColorstr='#0A3542' ,GradientType=0)";
+    background : linear-gradient(180deg, rgba(10, 53, 66, 0.5) 60%, rgba(10, 53, 66, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A3542',endColorstr='#0A3542' , GradientType=0);
+}
+#conference-banner img {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    top: -50px;
+}
+@media(max-width: 1200px) {
+    #conference-banner img {
+        top: inherit;
+    }
+}
+@media(max-width: 650px) {
+    #conference-banner {
+        overflow: hidden;
+    }
+    #conference-banner img {
+        width: 650px;
+    }
+}
+#figcaption-row {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1140px;
+}
+#banner figcaption,
+#banner h1,
+#banner a {
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.9em;
+    line-height: 0.5em;
+    text-shadow: 2px 2px 4px rgba(51, 51, 51, 1);
+}
+#banner figcaption time,
+#banner figcaption address {
+    display: inline-block;
+    margin-right: .7ch;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+#banner .youtube-link::before {
+    content: url(/images/youtube-icon.svg);
+    position: relative;
+    top: 9px;
+    left: -5px;
+}
+#banner .youtube-link {
+    font-size: 20px;
+    position: absolute;
+    right: -10px;
+    font-size: 20px;
+    top: 45px;
+}
+@media (max-width: 1200px) {
+    #figcaption-row {
+        left: 0;
+        transform: inherit;
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+    }
+}
+@media (max-width: 990px) {
+    #figcaption-row {
+        bottom: 0;
+    }
+    #banner figcaption,
+    #banner h1,
+    #banner a {
+        font-size: 1.5em;
+    }
+    #banner .youtube-link {
+        position: relative;
+        top: -10px;
+        right: 0;
+    }
+}
+@media (max-width: 650px) {
+
+    #banner figcaption,
+    #banner h1,
+    #banner a {
+        font-size: 1.3em;
+    }
+}
+@media (max-width: 500px) {
+    #figcaption-row {
+        bottom: 20px;
+    }
+    #banner figcaption {
+        position: relative;
+        top: 1em;
+    }
+    #banner figcaption,
+    #banner h1,
+    #banner a {
+        font-size: 1.1em;
+    }
+    #banner .youtube-link {
+        position: relative;
+        top: 0;
+        right: 0;
+        font-size: 16px;
+    }
+}
+/*-----------Conference Page Main--------- */
+#conference-page-row {
+    position: relative;
+}
+#conference-page-row {
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 630px) {
+    #conference-page-row {
+        flex-direction: column-reverse;
+    }   
+}
+#conference-page-row figure {
+    margin-bottom: 1em;
+}
+#conference-page-row figcaption {
+    font-size: .8em;
+    margin-top: .75em;
+}
+
+#conference-page article{
+    margin-bottom: 1em;
+    padding-top: 1em;
+    /*Padding-top added for space at the top of the screen when conference menu links are used to display an article*/
+}
+#conference-page article:first-of-type {
+    padding-top: 0;
+}
+@media (max-width: 1570px) {
+    #conference-page article {
+        margin-bottom: -1em;
+        padding-top: 3em;
+    }
+    #conference-page article:last-of-type {
+        margin-bottom: 0;
+    }
+}
+/*-----------#summary--------- */
+#conference-page #summary h1 {
+    font-weight: 800;
+    line-height: 1.1em;
+}
+#conference-page #summary h1 span {
+    font-weight: bold;
+    display: block;
+    text-transform: capitalize;
+    font-size: .9em;
+    color: #444;
+    line-height: 1.2em;
+}
+
+/*-----------#session-topics--------- */
+#session-topics ul {
+    -webkit-column-count: 2; 
+    -moz-column-count: 2; 
+    column-count: 2;
+}
+@media(max-width: 670px) {
+    #session-topics ul {
+        -webkit-column-count: inherit;
+        -moz-column-count: inherit;
+        column-count: inherit;
+    }
+}
+/*-----------Conference Resources sidebar--------- */
+
+#conference-resources {
+    width: 20%;
+}
+#conference-page-content {
+    width: 80%;
+}
+@media (max-width: 1200px) {
+    #conference-resources {
+        width: 230px;
+    }
+    #main-body {
+        width: calc(100% - 250px);
+    }
+}
+@media (max-width: 767px) and (min-width: 630px) {
+    #main-body {
+        width: 70%;
+        float: left;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #conference-resources {
+        width: 30%;
+        float: left;
+        padding-right: 30px;
+        font-size: 14px;
+    }
+    #conference-resources h3 {
+        font-size: 20px;
+    }
+    #conference-resources h4 {
+        font-size: 16px;
+    }
+    #conference-resources p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 630px) {
+    #conference-resources,
+    #main-body {
+        width: 100%;
+    }
+}
+@media (max-width: 990px) {
+    #banner + .container {
+        width: 100%;
+    }
+}
+#conference-page-row h1,
+#conference-page-row h2,
+#conference-page-row h3,
+#conference-page-row h4,
+#conference-page-row h5 {
+    text-transform: capitalize;
+}
+#conference-page-row * + h1,
+#conference-page-row * + h2,
+#conference-page-row * + h3,
+#conference-page-row * + h4,
+#conference-page-row * + h5 {
+    margin-top: .5em;
+}
+#featured-announcement {
+    background: rgba(175,214,226,.6);
+    padding: 1.25em 1em 1em;
+    margin-bottom: 1.5em;
+    border-left: .375em solid rgba(10, 51, 66, .25);
+}
+@media (max-width: 990px) {
+    #featured-announcement {
+        padding-left: .5em;
+    }
+}
+#conference-resources section,
+#conference-resources nav{
+    margin-bottom: 2.5em;
+}
+
+
+/*-----------Conference Sponsors--------- */
+#conference-sponsors br {
+    display: none;
+}
+#conference-sponsors div[class*="-sponsor"] {
+    /*margin-bottom: 2em;*/
+    display: flex;
+    flex-direction: column;
+}
+#conference-sponsors div[class*="-sponsor"] > a {
+    margin-bottom: 1.5em;
+}
+/*#conference-sponsors div[class*="-sponsor"] img + * {
+    margin-top: -1.5em;
+    display: block
+}*/
+#conference-sponsors img {
+    width: 100%;
+    max-width: 60%;
+    display: block;
+    margin-bottom: 1em;
+}
+#conference-sponsors img.bigger {
+    transform: scale(1.3);
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+@media (max-width: 650px) {
+    #conference-sponsors > div[class*="-sponsor"]:not(.silver-sponsor) {
+        width: 50%;
+        float: left;
+        margin-top: .5em;
+    }
+    #conference-sponsors > .silver-sponsor {
+        clear: both;
+    }
+}
