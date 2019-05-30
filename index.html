@@ -19,7 +19,7 @@
 		<!-- Google fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,700" rel="stylesheet">
 		<!-- Style sheets -->
-		<link rel="stylesheet" type="text/css" href="css/style.css" />		
+		<link id="css" rel="stylesheet" type="text/css" href="css/style.css" />		
 		<script>
 			var currentdate = new Date(); 
 			    var datetime = "Now: " + currentdate.getDate() + "/" 
@@ -27,7 +27,7 @@
 	                + currentdate.getMinutes() + ":" 
 	                + currentdate.getSeconds();
 			
-            $( 'link[rel="stylesheet"]' ).replaceWith( '<link rel="stylesheet" type="text/css" href="css/style.css?'+document.write(datetime)+'"/>' );
+            $( '#css' ).attr( 'href', currentvalue.add(datetime);
 		</script>
 	</head>
 	<style>
