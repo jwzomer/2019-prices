@@ -37,18 +37,16 @@ tbody::before {
 	display: block;
 	margin-top: 1em;
 }
-tbody tr {
-	border-bottom: 0.5px solid #aaa;
+thead > tr,
+tbody > tr {
+    border-bottom: 0.5px solid #ddd;
 }
-tbody tr:nth-of-type(odd) {
+/*tbody tr:nth-of-type(odd) {
 	background: #eee;
-}
-thead > tr:nth-of-type(odd) {
-	background: transparent;
-}
+}*/
 tr > td {
 	width: calc(650px / 4);
-	padding: 1.4em .75em;
+	padding: 1.9em 1px;
 }
 @media (min-width: 800px) {
 	tr > td:first-child {
@@ -56,7 +54,7 @@ tr > td {
 		font-size: 1.1em;
 	}
 	thead tr > td {
-		padding: .5em .75em;
+		padding: .5em 1px;
 	}
 	tr > td[colspan="3"] div{
 		max-width: 80%;
