@@ -55,7 +55,7 @@ tbody > tr {
     transition: border .125s;
 }
 tr:hover {
-    border-color: #ddd;
+    border-color: #777;
 }
 td {
 	width: calc(650px / 4);
