@@ -50,20 +50,25 @@ tbody::before {
 }
 thead > tr,
 tbody > tr {
-    border-bottom: 1px solid #ddd;
     position: relative;
-    transition: border-color .25s;
 }
-
-tbody tr:hover{
-	border-color: #777;
+tr::after {
+	content: '';
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+	left: 0;
+    bottom: 0;
+    transition: border .125s;
+}
+tr:hover::after{
+    border-width: 3px;
 }
 td {
 	width: calc(650px / 4);
 	padding: 1.9em .5em;
 	position: relative;
-	border-left: 1px solid white;
-	border-right: 1px solid white;
+	background: transparent;
+	transition: background .125s;
 }
 td:hover:not(:first-child)::after,
 th:hover:not(:first-child)::after {
@@ -75,8 +80,9 @@ th:hover:not(:first-child)::after {
 	width: 100%;
 	z-index: -1;
 	opacity: .5;
-	border-left: 1px solid #777;
-	border-right: 1px solid #777;
+	background: var(--secondary);
+	/*border-left: 1px solid #777;
+	border-right: 1px solid #777;*/
 }
 td[colspan="2"],
 td[colspan="3"] {
