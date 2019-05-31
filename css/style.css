@@ -43,7 +43,7 @@ tr > td {
 @media (min-width: 800px) {
 	tr > td:first-child {
 		width: 45ch;
-		font-size: 18px;
+		font-size: 1.1em;
 	}
 	thead tr > td {
 		padding: .5em .75em;
