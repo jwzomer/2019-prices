@@ -63,7 +63,7 @@ td {
 }
 tr:hover > td {
     border-bottom: 3px solid #ddd;
-    padding-bottom: calc(1.9em - 3px);
+    padding-bottom: calc(1.9em - 1.5px);
 }
 td:hover:not(:first-child)::after,
 th:hover:not(:first-child)::after {
