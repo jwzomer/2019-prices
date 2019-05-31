@@ -56,14 +56,15 @@ tbody > tr {
 }
 td {
 	width: calc(650px / 4);
-    border-bottom: 3px solid transparent;
-	padding: 1.9em .5em;
+    /*border-bottom: 3px solid transparent;*/
+	padding: 1.9em .5em calc(1.9em + 3px);
 	position: relative;
 	background: transparent;
-	transition: background .125s, border .125s;
+	transition: background .125s, border .125s, padding .125s;
 }
 tr:hover > td {
     border-bottom: 3px solid #ddd;
+    padding-bottom: 1.9em;
 }
 td:hover:not(:first-child)::after,
 th:hover:not(:first-child)::after {
