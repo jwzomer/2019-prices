@@ -51,20 +51,19 @@ tbody::before {
 thead > tr,
 tbody > tr {
     position: relative;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 3px solid #ddd;
     transition: border .125s;
+}
+tr:hover {
+    border-color: #ddd;
 }
 td {
 	width: calc(650px / 4);
     /*border-bottom: 3px solid transparent;*/
-	padding: 1.9em .5em calc(1.9em + 3px);
+	padding: 1.9em .5em;
 	position: relative;
 	background: transparent;
-	transition: background .125s, border .125s, padding .125s;
-}
-tr:hover > td {
-    border-bottom: 3px solid #ddd;
-    padding-bottom: 1.9em;
+	transition: background .125s, border .125s;
 }
 td:hover:not(:first-child)::after,
 th:hover:not(:first-child)::after {
