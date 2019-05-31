@@ -45,38 +45,44 @@ tbody::before {
 }
 thead > tr,
 tbody > tr {
-    border-bottom: 0.5px solid #ddd;
+    border-bottom: 1px solid #ddd;
     position: relative;
+    transition: border-color .25s;
 }
 
 tbody tr:hover{
-	content: '';
-	background-color: var(--secondary);
+	border-color: #777;
 }
 td {
 	width: calc(650px / 4);
-	padding: 1.9em 1px;
+	padding: 1.9em .5em;
 	position: relative;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
 }
 td:hover::after,
 th:hover::after {
 	content: "";
 	position: absolute;
-	background-color: var(--secondary);
 	left: 0;
 	top: -5000px;
 	height: 10000px;
 	width: 100%;
 	z-index: -1;
 	opacity: .5;
+	border-left: 1px solid #777;
+	border-right: 1px solid #777;
 }
 @media (min-width: 800px) {
 	td:first-child {
 		width: 45ch;
 		font-size: 1.1em;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	thead td {
-		padding: .5em 1px;
+		padding-top: .5em;
+		padding-bottom: .5em;
 	}
 	td[colspan="3"] div{
 		max-width: 80%;
