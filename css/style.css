@@ -9,10 +9,14 @@ body {
 	font-weight: normal;
 	margin: 0 auto;
 	max-width: 1000px;
-	padding: 1em;
+	padding: 7vh 1em 0;
+}
+table {
+	border-collapse: collapse;
 }
 caption {
-	margin-bottom: -4.5em;
+	margin-bottom: -3em;
+	text-align: left;
 }
 h1, thead, #totals {
 	font-weight: bold;
@@ -22,6 +26,7 @@ h1 {
 	letter-spacing: -0.5px;
 	color: #777;
 	margin: 0;
+	padding-bottom: 5px;
 }
 thead {
 	font-size: 1.1em;
@@ -31,6 +36,9 @@ tbody::before {
 	content: '';
 	display: block;
 	margin-top: 1em;
+}
+tbody tr {
+	border-bottom: 0.5px solid #aaa;
 }
 tbody tr:nth-of-type(odd) {
 	background: #eee;
