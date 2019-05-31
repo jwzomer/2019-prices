@@ -3,7 +3,7 @@ html {
 	min-height: 100%;
 	color: #333;
 	--primary: #3385cc;
-	--secondary: ;
+	--secondary: purple;
 	--accent: tomato;
 }
 body {
@@ -16,7 +16,6 @@ body {
 }
 table {
 	border-collapse: collapse;
-	overflow: hidden;
 }
 caption {
 	margin-bottom: -3em;
@@ -36,6 +35,9 @@ thead {
 	font-size: 1.1em;
 	color: var(--primary);
 }
+tbody {
+	overflow: hidden;
+}
 tbody::before {
 	content: '';
 	display: block;
@@ -44,11 +46,10 @@ tbody::before {
 thead > tr,
 tbody > tr {
     border-bottom: 0.5px solid #ddd;
+    position: relative;
 }
-/*tbody tr:nth-of-type(odd) {
-	background: #eee;
-}*/
-tbody tr:hover::after {
+
+tbody tr:hover{
 	content: '';
 	background-color: var(--secondary);
 	position: absolute;
