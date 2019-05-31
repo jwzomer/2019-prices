@@ -16,6 +16,7 @@ body {
 }
 table {
 	border-collapse: collapse;
+	overflow: hidden;
 }
 caption {
 	margin-bottom: -3em;
@@ -34,6 +35,10 @@ h1 {
 thead {
 	font-size: 1.1em;
 	color: var(--primary);
+}
+thead,
+tfoot {
+	background: white;
 }
 tbody {
 	overflow: hidden;
@@ -60,8 +65,8 @@ td {
 	border-left: 1px solid white;
 	border-right: 1px solid white;
 }
-td:hover::after,
-th:hover::after {
+td:hover:not(:first-child)::after,
+th:hover:not(:first-child)::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -72,6 +77,10 @@ th:hover::after {
 	opacity: .5;
 	border-left: 1px solid #777;
 	border-right: 1px solid #777;
+}
+td[colspan="2"],
+td[colspan="3"] {
+	background: rgba(255, 255, 255, 0.75);
 }
 @media (min-width: 800px) {
 	td:first-child {
