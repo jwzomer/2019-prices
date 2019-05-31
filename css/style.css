@@ -11,6 +11,9 @@ body {
 	max-width: 1000px;
 	padding: 1em;
 }
+caption {
+	margin-bottom: -4.5em;
+}
 h1, thead, #totals {
 	font-weight: bold;
 }
@@ -59,7 +62,7 @@ tr > td {
 	height: 100%;
 }
 .yes::after {
-	content: '✔';
+	content:  "\2714"
 	font-weight: bold;
 	opacity: .75;
 	margin-left: 3ch;
