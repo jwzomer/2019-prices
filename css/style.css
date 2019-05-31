@@ -2,6 +2,9 @@ html {
 	display: flex;
 	min-height: 100%;
 	color: #333;
+	--primary: #3385cc;
+	--secondary: ;
+	--accent: tomato;
 }
 body {
 	font-size: 16px;
@@ -13,6 +16,7 @@ body {
 }
 table {
 	border-collapse: collapse;
+	overflow: hidden;
 }
 caption {
 	margin-bottom: -3em;
@@ -30,7 +34,7 @@ h1 {
 }
 thead {
 	font-size: 1.1em;
-	color: #3385cc;
+	color: var(--primary);
 }
 tbody::before {
 	content: '';
@@ -44,19 +48,44 @@ tbody > tr {
 /*tbody tr:nth-of-type(odd) {
 	background: #eee;
 }*/
-tr > td {
+tbody tr:hover::after {
+	content: '';
+	background-color: var(--secondary);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: .5;
+	z-index: -1;
+	display: block;
+}
+td {
 	width: calc(650px / 4);
 	padding: 1.9em 1px;
+	position: relative;
+}
+td:hover::after,
+th:hover::after {
+	content: "";
+	position: absolute;
+	background-color: var(--secondary);
+	left: 0;
+	top: -5000px;
+	height: 10000px;
+	width: 100%;
+	z-index: -1;
+	opacity: .5;
 }
 @media (min-width: 800px) {
-	tr > td:first-child {
+	td:first-child {
 		width: 45ch;
 		font-size: 1.1em;
 	}
-	thead tr > td {
+	thead td {
 		padding: .5em 1px;
 	}
-	tr > td[colspan="3"] div{
+	td[colspan="3"] div{
 		max-width: 80%;
 		margin: 0 auto;
 	}
@@ -85,7 +114,7 @@ tfoot {
 	font-size: 1.3em;
 }
 #totals td {
-	color: tomato;
+	color: var(--accent);
 	padding-top: 1em;
 }
 @media (max-width: 800px) {
@@ -117,9 +146,6 @@ tfoot {
 		width: inherit;
 		display: flex;
 	}
-	tbody tr:nth-of-type(odd) {
-		background: transparent;
-	}
 	tbody tr::after {
 		content: '';
 		display: block;
@@ -130,25 +156,25 @@ tfoot {
 	td:empty {
 		display: none !important;
 	}
-	thead tr > td,
-	tfoot tr > td {
+	thead td,
+	tfoot td {
 		padding-top: .5em;
 		padding-bottom: .5em;
 		margin-bottom: 0;
 	}
-	tr > td {
+	td {
 		width: 25%;
 		display: inline-block;
 		padding: .5em;
 		margin-bottom: 2.5em;
 	}
-	tr > td[colspan="2"] {
+	td[colspan="2"] {
 		width: 50%;
 	}
-	tr > td[colspan="3"] {
+	td[colspan="3"] {
 		width: 75%;
 	}
-	tr > td:first-child {
+	td:first-child {
 		width: 100%;
 		display: inline-block;
 		/*font-weight: bold;
