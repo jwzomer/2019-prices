@@ -55,7 +55,7 @@ tbody > tr {
     transition: border .125s;
 }
 tr:hover {
-    border-color: #777;
+    border-color: #bfbfbf;
 }
 td {
 	width: calc(650px / 4);
@@ -75,7 +75,7 @@ th:hover:not(:first-child)::after {
 	width: 100%;
 	z-index: -1;
 	opacity: .5;
-	background: var(--secondary);
+	background: #EBF4F5;
 	/*border-left: 1px solid #777;
 	border-right: 1px solid #777;*/
 }
