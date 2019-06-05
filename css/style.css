@@ -53,6 +53,7 @@ tbody > tr {
     position: relative;
     border-bottom: 3px solid #ddd;
     transition: .125s border;
+    mix-blend-mode: multiply;
 }
 tr:hover {
     border-color: #bfbfbf;
