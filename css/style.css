@@ -3,7 +3,7 @@ html {
 	min-height: 100%;
 	color: #333;
 	--primary: #3385cc;
-	--secondary: purple;
+	--secondary: #007480;
 	--accent: tomato;
 }
 body {
@@ -52,36 +52,17 @@ thead > tr,
 tbody > tr {
     position: relative;
     border-bottom: 3px solid #ddd;
-    transition: border .125s;
+    transition: .125s border;
 }
 tr:hover {
     border-color: #bfbfbf;
 }
 td {
 	width: calc(650px / 4);
-    /*border-bottom: 3px solid transparent;*/
 	padding: 1.9em .5em;
 	position: relative;
 	background: transparent;
-	transition: background .125s, border .125s;
-}
-td:hover:not(:first-child)::after,
-th:hover:not(:first-child)::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: -5000px;
-	height: 10000px;
-	width: 100%;
-	z-index: -1;
-	opacity: .5;
-	background: #EBF4F5;
-	/*border-left: 1px solid #777;
-	border-right: 1px solid #777;*/
-}
-td[colspan="2"],
-td[colspan="3"] {
-	background: rgba(255, 255, 255, 0.75);
+	transition: .125s background;
 }
 @media (min-width: 800px) {
 	td:first-child {
@@ -94,6 +75,24 @@ td[colspan="3"] {
 		padding-top: .5em;
 		padding-bottom: .5em;
 	}
+}
+td:hover:not(:first-child)::after,
+th:hover:not(:first-child)::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -5000px;
+	height: 10000px;
+	width: 100%;
+	z-index: -1;
+	opacity: .2;
+	background: var(--secondary);
+}
+td[colspan="2"],
+td[colspan="3"] {
+	background: rgba(255, 255, 255, 0.75);
+}
+@media (min-width: 800px) {
 	td[colspan="3"] div{
 		max-width: 80%;
 		margin: 0 auto;
