@@ -44,7 +44,7 @@ tbody {
 	overflow: hidden;
 }
 tbody::before {
-	content: '';
+/*	content: '';*/
 	display: block;
 	margin-top: 1em;
 }
@@ -60,7 +60,7 @@ tr:hover {
 }
 td {
 	width: calc(650px / 4);
-	padding: 1.9em .5em;
+	padding: 1.7em .5em;
 	position: relative;
 	background: transparent;
 	transition: .125s background;
@@ -73,8 +73,8 @@ td {
 		padding-right: 0;
 	}
 	thead td {
-		padding-top: .5em;
-		padding-bottom: .5em;
+		padding-top: 1.25em;
+		padding-bottom: 1.25em;
 	}
 }
 td:hover:not(:first-child)::after,
