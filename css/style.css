@@ -73,8 +73,8 @@ td {
 		padding-right: 0;
 	}
 	thead td {
-		padding-top: 1.25em;
-		padding-bottom: 1.25em;
+		padding-top: 1.15em;
+		padding-bottom: 1.15em;
 	}
 }
 td:hover:not(:first-child)::after,
