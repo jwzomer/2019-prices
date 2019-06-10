@@ -105,6 +105,9 @@ tr:hover {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-columns: repeat(auto-fill, 1fr );
 	}
+	* {
+		color: blue !important;
+	}
 	tfoot {
 		position: fixed;
 		bottom: 0;
