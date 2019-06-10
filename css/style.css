@@ -22,6 +22,11 @@ caption {
 	margin-bottom: -3em;
 	text-align: left;
 }
+@media (min-width: 800px) {
+	caption {
+		max-width: 30ch;
+	}
+}
 h1, thead, #totals {
 	font-weight: bold;
 }
@@ -54,6 +59,11 @@ tbody > tr {
     border-bottom: 3px solid #ddd;
     transition: .125s border;
     mix-blend-mode: multiply;
+}
+@media (max-height: 800px) {
+	tbody > tr:first-child {
+		border-top: 3px solid #ddd;
+	}
 }
 tr:hover {
     border-color: #bfbfbf;
