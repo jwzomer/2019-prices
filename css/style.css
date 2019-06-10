@@ -210,7 +210,7 @@ tfoot {
 		bottom: 0;
 	}
 }
-#totals td {
+tfoot td {
 	color: var(--accent);display: block;
 	padding-top: 1em;
 }
