@@ -90,9 +90,9 @@ tr:hover {
     border-color: #bfbfbf;
 }
 @media (max-width: 800px) {
-	tbody > tr:first-child {
+/*	tbody > tr:first-child {
 		border-top: 3px solid #ddd;
-	}
+	}*/
 	tbody tr::after {
 		content: '';
 		display: block;
@@ -172,12 +172,6 @@ td[colspan="2"],
 td[colspan="3"] {
 	background: rgba(255, 255, 255, 0.25);
 }
-@media (min-width: 800px) {
-	td[colspan="3"] div{
-		max-width: 80%;
-		margin: 0 auto;
-	}
-}
 @media (max-width: 800px) {
 	td[colspan="2"] {
 		/*width: 100%;*/
@@ -189,6 +183,12 @@ td[colspan="3"] {
 	}
 	tfoot td:empty {
 		/*display: none !important*/;
+	}
+}
+@media (min-width: 800px) {
+	td[colspan="3"] div{
+		max-width: 80%;
+		margin: 0 auto;
 	}
 }
 @media (max-width: 800px) {
