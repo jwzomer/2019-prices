@@ -134,12 +134,13 @@ td {
 }
 @media (max-width: 800px) {
 	td {
-		width: 25%;
+		/*width: 25%;*/
+		width: unset;
 		padding: .5em;
 		margin-bottom: 2.5em;
 	}
 	td:first-child {
-		width: 100%;
+		/*width: 100%;*/
 		margin-bottom: 0;
 		padding-bottom: .5rem;
 		grid-column: 1 / -1;
@@ -173,10 +174,12 @@ td[colspan="3"] {
 }
 @media (max-width: 800px) {
 	td[colspan="2"] {
-		width: 50%;
+		/*width: 100%;*/
+		grid-column-end: span 2;
 	}
 	td[colspan="3"] {
-		width: 75%;
+		/*width: 100%;*/
+		grid-column-end: span 3;
 	}
 	td:empty {
 		/*display: none !important*/;
