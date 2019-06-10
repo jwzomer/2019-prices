@@ -158,9 +158,6 @@ td {
 		grid-column: 1 / -1;
 
 	}
-	tfoot td:nth-child(2) {
-		grid-column-start: 2;
-	}
 }
 td:hover:not(:first-child)::after,
 th:hover:not(:first-child)::after {
