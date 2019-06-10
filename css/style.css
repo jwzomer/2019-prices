@@ -89,7 +89,7 @@ tbody > tr {
 tr:hover {
     border-color: #bfbfbf;
 }
-@media (max-height: 800px) {
+@media (max-width: 800px) {
 	tbody > tr:first-child {
 		border-top: 3px solid #ddd;
 	}
