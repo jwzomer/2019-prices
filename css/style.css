@@ -141,7 +141,6 @@ td {
 @media (max-width: 800px) {
 	td {
 		width: 25%;
-		display: inline-block;
 		padding: .5em;
 		margin-bottom: 2.5em;
 	}
@@ -159,7 +158,7 @@ td {
 		margin-bottom: 0;
 	}
 	tbody td:not(:first-child) {
-		text-align: center;
+		/*text-align: center;*/
 		font-size: 14px;
 	}
 }
@@ -177,7 +176,7 @@ th:hover:not(:first-child)::after {
 }
 td[colspan="2"],
 td[colspan="3"] {
-	background: rgba(255, 255, 255, 0.75);
+	background: rgba(255, 255, 255, 0.25);
 }
 @media (max-width: 800px) {
 	td[colspan="2"] {
