@@ -100,14 +100,6 @@ tr:hover {
 		margin: 0 auto;
 		opacity: .5;
 	}
-	tbody tr {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		grid-template-columns: repeat(auto-fill, 1fr );
-	}
-	* {
-		color: blue !important;
-	}
 	tfoot {
 		position: fixed;
 		bottom: 0;
@@ -115,10 +107,10 @@ tr:hover {
 		width: 100%;
 		z-index: 2;
 	}
+	tbody tr,
 	tfoot tr {
-		width: inherit;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, 1fr);
+		grid-template-columns: repeat(4, 1fr );
 	}
 }
 td {
