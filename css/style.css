@@ -14,9 +14,15 @@ body {
 	max-width: 1000px;
 	padding: 7vh 1em 0;
 }
+@media (max-width: 800px) {
+	body {
+		padding: .25em;
+	}
+}
 table {
 	border-collapse: collapse;
 	overflow: hidden;
+	max-width: 100%;
 }
 caption {
 	margin-bottom: -3em;
@@ -37,22 +43,44 @@ h1 {
 	margin: 0;
 	padding-bottom: 5px;
 }
+@media (max-width: 800px) {
+	h1 {
+		padding-left: .5rem;
+		margin-bottom: 1em;
+		margin-top: .5em;
+	}
+}
 thead {
 	font-size: 1.1em;
 	color: var(--primary);
+}
+@media (max-width: 800px) {
+	thead {
+		top: 0;
+	}
 }
 thead,
 tfoot {
 	background: white;
 }
+@media (max-width: 800px) {
+	thead,
+	tfoot {
+		position: sticky;
+		position: -webkit-sticky;
+		display: inline-block;
+		width: 100%;
+		z-index: 2;
+	}
+}
 tbody {
 	overflow: hidden;
 }
-tbody::before {
-/*	content: '';*/
+/*tbody::before {
+	content: '';
 	display: block;
 	margin-top: 1em;
-}
+}*/
 thead > tr,
 tbody > tr {
     position: relative;
@@ -60,13 +88,25 @@ tbody > tr {
     transition: .125s border;
     mix-blend-mode: multiply;
 }
+tr:hover {
+    border-color: #bfbfbf;
+}
 @media (max-height: 800px) {
+	thead tr,
+	tfoot tr {
+		width: inherit;
+		display: flex;
+	}
 	tbody > tr:first-child {
 		border-top: 3px solid #ddd;
 	}
-}
-tr:hover {
-    border-color: #bfbfbf;
+	tbody tr::after {
+		content: '';
+		display: block;
+		width: calc(100% - 1em);
+		margin: 0 auto;
+		opacity: .5;
+	}
 }
 td {
 	width: calc(650px / 4);
@@ -87,6 +127,32 @@ td {
 		padding-bottom: 1.15em;
 	}
 }
+@media (max-width: 800px) {
+	thead td,
+	tfoot td {
+		padding-top: .5em;
+		padding-bottom: .5em;
+		margin-bottom: 0;
+	}
+	td {
+		width: 25%;
+		display: inline-block;
+		padding: .5em;
+		margin-bottom: 2.5em;
+	}
+	td:first-child {
+		width: 100%;
+		display: inline-block;
+		/*font-weight: bold;
+		opacity: .8;*/
+		margin-bottom: 0;
+		padding-bottom: .5rem;
+	}
+	tbody td:not(:first-child) {
+		text-align: center;
+		font-size: 14px;
+	}
+}
 td:hover:not(:first-child)::after,
 th:hover:not(:first-child)::after {
 	content: "";
@@ -103,11 +169,45 @@ td[colspan="2"],
 td[colspan="3"] {
 	background: rgba(255, 255, 255, 0.75);
 }
+@media (max-width: 800px) {
+	td[colspan="2"] {
+		width: 50%;
+	}
+	td[colspan="3"] {
+		width: 75%;
+	}
+	td:empty {
+		display: none /*!important*/;
+	}
+}
 @media (min-width: 800px) {
 	td[colspan="3"] div{
 		max-width: 80%;
 		margin: 0 auto;
 	}
+}
+@media (max-width: 800px) {
+	tbody td > div {
+		text-align: left;
+		display: inline-block;
+	}
+	tbody td:first-child > div::after {
+		content: ':';
+		font-size: inherit;
+		display: inline-block;
+	}
+}
+tfoot {
+	font-size: 1.3em;
+}
+@media (max-width: 800px) {
+	tfoot {
+		bottom: 0;
+	}
+}
+#totals td {
+	color: var(--accent);
+	padding-top: 1em;
 }
 .yes,
 .no {
@@ -129,91 +229,7 @@ td[colspan="3"] {
 	opacity: .65;
 	margin-left: 3ch;
 }
-tfoot {
-	font-size: 1.3em;
-}
-#totals td {
-	color: var(--accent);
-	padding-top: 1em;
-}
 @media (max-width: 800px) {
-	body {
-		padding: .25em;
-	}
-	h1 {
-		padding-left: .5rem;
-		margin-bottom: 1em;
-		margin-top: .5em;
-	}
-	table {
-		max-width: 100%;
-	}
-	thead,
-	tfoot {
-		position: sticky;
-		position: -webkit-sticky;
-		display: inline-block;
-		background: white;
-		width: 100%;
-		z-index: 2;
-	}
-	thead {
-		top: 0;
-	}
-	thead tr,
-	tfoot tr {
-		width: inherit;
-		display: flex;
-	}
-	tbody tr::after {
-		content: '';
-		display: block;
-		width: calc(100% - 1em);
-		margin: 0 auto;
-		opacity: .5;
-	}
-	td:empty {
-		display: none !important;
-	}
-	thead td,
-	tfoot td {
-		padding-top: .5em;
-		padding-bottom: .5em;
-		margin-bottom: 0;
-	}
-	td {
-		width: 25%;
-		display: inline-block;
-		padding: .5em;
-		margin-bottom: 2.5em;
-	}
-	td[colspan="2"] {
-		width: 50%;
-	}
-	td[colspan="3"] {
-		width: 75%;
-	}
-	td:first-child {
-		width: 100%;
-		display: inline-block;
-		/*font-weight: bold;
-		opacity: .8;*/
-		margin-bottom: 0;
-		padding-bottom: .5rem;
-	}
-	tbody td:not(:first-child) {
-		text-align: center;
-		font-size: 14px;
-	}
-	tbody td > div {
-		text-align: left;
-		display: inline-block;
-	}
-	tbody td:first-child > div::after {
-		content: ':';
-		font-size: inherit;
-		display: inline-block;
-	}
 	.yes::after,  
 	.no::after {
 		margin-left: 0;
@@ -223,8 +239,5 @@ tfoot {
 		/*bottom: -.8em;
 		position: relative;*/
 		/*margin-top: -0.7em;*/
-	}
-	tfoot {
-		bottom: 0;
 	}
 }
