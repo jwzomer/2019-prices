@@ -182,7 +182,7 @@ td[colspan="3"] {
 		grid-column-end: span 3;
 	}
 	tfoot td:empty {
-		/*display: none !important*/;
+		display: none;
 	}
 }
 @media (min-width: 800px) {
