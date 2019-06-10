@@ -25,12 +25,20 @@ table {
 	max-width: 100%;
 }
 caption {
-	margin-bottom: -3em;
 	text-align: left;
 }
 @media (min-width: 800px) {
 	caption {
 		max-width: 30ch;
+		margin-bottom: -3em;
+	}
+}
+@media (max-width: 800px) {
+	caption {
+		padding-left: .5rem;
+	}
+	caption span {
+		display: block;
 	}
 }
 h1, thead, #totals {
@@ -44,26 +52,24 @@ h1 {
 	padding-bottom: 5px;
 }
 @media (max-width: 800px) {
-	h1 {
+	/*h1 {
 		padding-left: .5rem;
 		margin-bottom: 1em;
 		margin-top: .5em;
-	}
+	}*/
 }
 thead {
 	font-size: 1.1em;
 	color: var(--primary);
-}
-@media (max-width: 800px) {
-	thead {
-		top: 0;
-	}
 }
 thead,
 tfoot {
 	background: white;
 }
 @media (max-width: 800px) {
+	thead {
+		display: none;
+	}
 	thead,
 	tfoot {
 		position: sticky;
@@ -107,6 +113,11 @@ tr:hover {
 		margin: 0 auto;
 		opacity: .5;
 	}
+	tbody tr {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: repeat(auto-fill, 1fr );
+	}
 }
 td {
 	width: calc(650px / 4);
@@ -128,12 +139,6 @@ td {
 	}
 }
 @media (max-width: 800px) {
-	thead td,
-	tfoot td {
-		padding-top: .5em;
-		padding-bottom: .5em;
-		margin-bottom: 0;
-	}
 	td {
 		width: 25%;
 		display: inline-block;
@@ -143,10 +148,15 @@ td {
 	td:first-child {
 		width: 100%;
 		display: inline-block;
-		/*font-weight: bold;
-		opacity: .8;*/
 		margin-bottom: 0;
 		padding-bottom: .5rem;
+		grid-column: 1 / -1;
+	}
+	thead td,
+	tfoot td {
+		padding-top: .5em;
+		padding-bottom: .5em;
+		margin-bottom: 0;
 	}
 	tbody td:not(:first-child) {
 		text-align: center;
