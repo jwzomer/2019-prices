@@ -148,7 +148,6 @@ td {
 		display: inline-block;
 		margin-bottom: 0;
 		padding-bottom: .5rem;
-		grid-column: 1 / -1;
 	}
 	thead td,
 	tfoot td {
@@ -159,6 +158,10 @@ td {
 	tbody td:not(:first-child) {
 		/*text-align: center;*/
 		font-size: 14px;
+	}
+	tbody td:first-child {
+		grid-column: 1 / -1;
+
 	}
 	tfoot td:nth-child(2) {
 		grid-column-start: 2;
