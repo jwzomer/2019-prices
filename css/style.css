@@ -145,7 +145,7 @@ td {
 	}
 	td:first-child {
 		width: 100%;
-		display: inline-block;
+		/*display: inline-block;*/
 		margin-bottom: 0;
 		padding-bottom: .5rem;
 	}
