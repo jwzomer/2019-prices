@@ -191,7 +191,7 @@ td[colspan="3"] {
 		width: 75%;
 	}
 	td:empty {
-		display: none /*!important*/;
+		/*display: none !important*/;
 	}
 }
 @media (min-width: 800px) {
