@@ -70,14 +70,6 @@ tfoot {
 	thead {
 		display: none;
 	}
-	thead,
-	tfoot {
-		position: sticky;
-		position: -webkit-sticky;
-		display: inline-block;
-		width: 100%;
-		z-index: 2;
-	}
 }
 tbody {
 	overflow: hidden;
@@ -98,11 +90,6 @@ tr:hover {
     border-color: #bfbfbf;
 }
 @media (max-height: 800px) {
-	thead tr,
-	tfoot tr {
-		width: inherit;
-		display: flex;
-	}
 	tbody > tr:first-child {
 		border-top: 3px solid #ddd;
 	}
@@ -117,6 +104,18 @@ tr:hover {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-columns: repeat(auto-fill, 1fr );
+	}
+	tfoot {
+		position: fixed;
+		bottom: 0;
+		display: inline-block;
+		width: 100%;
+		z-index: 2;
+	}
+	tfoot tr {
+		width: inherit;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 1fr);
 	}
 }
 td {
@@ -160,6 +159,9 @@ td {
 	tbody td:not(:first-child) {
 		/*text-align: center;*/
 		font-size: 14px;
+	}
+	tfoot td:nth-child(2) {
+		grid-column-start: 2;
 	}
 }
 td:hover:not(:first-child)::after,
