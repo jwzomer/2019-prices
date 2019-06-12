@@ -15,7 +15,7 @@ body {
 	padding: 7vh 1em 0;
 }
 @media (max-width: 800px) {
-	body {
+	body { 
 		padding: .25em;
 	}
 }
