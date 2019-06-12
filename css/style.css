@@ -33,6 +33,9 @@ caption {
 		margin-bottom: -3em;
 	}
 }
+caption span {
+	font-size: .9em;
+}
 @media (max-width: 800px) {
 	caption {
 		padding-left: .5rem;
@@ -224,16 +227,14 @@ tfoot td {
 	content:  url(../images/check-mark.svg);
 	font-weight: bold;
 	opacity: .75;
-	margin-left: 3ch;
 }
 .no::after {
 	content: '';
 	background-color: currentColor;
 	width: 1em;
-	height: calc(1em / 8);
+	height: calc(1em / 5.5);
 	display: block;
 	opacity: .65;
-	margin-left: 3ch;
 }
 @media (max-width: 800px) {
 	.yes::after,  
