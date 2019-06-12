@@ -211,7 +211,8 @@ tfoot {
 	}
 }
 tfoot td {
-	color: var(--accent);display: block;
+	color: var(--accent);
+	/*display: block;*/
 	padding-top: 1em;
 }
 .yes,
