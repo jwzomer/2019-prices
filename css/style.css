@@ -24,6 +24,11 @@ table {
 	overflow: hidden;
 	max-width: 100%;
 }
+@media (max-width: 800px) {
+	table {
+		max-width: 450px;
+	}
+}
 caption {
 	text-align: left;
 }
