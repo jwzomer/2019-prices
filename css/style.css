@@ -12,7 +12,7 @@ body {
 	font-weight: normal;
 	margin: 0 auto;
 	max-width: 1000px;
-	padding: 7vh 1em 0;
+	padding: 7vh 1em 3.5vh;
 }
 @media (max-width: 800px) {
 	body { 
@@ -39,9 +39,14 @@ caption span {
 @media (max-width: 800px) {
 	caption {
 		padding-left: .5rem;
+		padding-right: .5rem;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	caption span {
-		display: block;
+		align-self: center;
 	}
 }
 h1, thead, #totals {
@@ -234,7 +239,11 @@ tfoot td {
 	width: 1em;
 	height: calc(1em / 5.5);
 	display: block;
-	opacity: .65;
+	opacity: .75;
+}
+.yes::after,
+.no::after {
+	margin-left: 20%;
 }
 @media (max-width: 800px) {
 	.yes::after,  
