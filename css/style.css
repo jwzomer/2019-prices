@@ -155,7 +155,7 @@ tfoot td {
 	}
 	thead, tfoot {
 		position: fixed;
-		bottom: 2em;
+		bottom: 0;
 		width: 80vw;
 		background: white;
 	}
