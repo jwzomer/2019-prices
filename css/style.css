@@ -153,15 +153,23 @@ tfoot td {
 	caption span {
 		align-self: center;
 	}
+	thead, tfoot {
+		position: fixed;
+		bottom: 2em;
+		width: 80vw;
+		background: white;
+	}
+	thead {
+		padding-bottom: 2em;
+	}
+	tfoot {
+		padding-bottom: .5em;
+	}
 	thead tr,
 	tbody tr,
 	tfoot tr {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr );
-	}
-	thead {
-		position: fixed;
-		bottom: 2em;
 	}
 	thead tr {
 		display: grid;
@@ -177,13 +185,6 @@ tfoot td {
 		width: calc(100% - 1em);
 		margin: 0 auto;
 		opacity: .5;
-	}
-	tfoot {
-		position: fixed;
-		bottom: .5em;
-		display: inline-block;
-		width: 100%;
-		z-index: 2;
 	}
 	td {
 		/*width: 25%;*/
@@ -225,9 +226,9 @@ tfoot td {
 		font-size: inherit;
 		display: inline-block;
 	}
-	tfoot {
+	/*tfoot {
 		bottom: 0;
-	}
+	}*/
 	.yes::after,  
 	.no::after {
 		margin-left: 0;
