@@ -40,10 +40,6 @@ thead {
 	font-size: 1.1em;
 	color: var(--primary);
 }
-thead,
-tfoot {
-	background: white;
-}
 tbody {
 	overflow: hidden;
 }
@@ -120,6 +116,10 @@ tfoot td {
 		padding-left: 0;
 		padding-right: 0;
 	}
+	thead,
+	tfoot {
+		background: white;
+	}
 	thead td {
 		padding-top: 1.15em;
 		padding-bottom: 1.15em;
@@ -151,8 +151,15 @@ tfoot td {
 	caption span {
 		align-self: center;
 	}
+	thead tr,
+	tbody tr,
+	tfoot tr {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr );
+	}
 	thead {
-		order: 0;
+		position: fixed;
+		bottom: 2em;
 	}
 	thead tr {
 		display: grid;
@@ -167,15 +174,10 @@ tfoot td {
 	}
 	tfoot {
 		position: fixed;
-		bottom: 0;
+		bottom: .5em;
 		display: inline-block;
 		width: 100%;
 		z-index: 2;
-	}
-	tbody tr,
-	tfoot tr {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr );
 	}
 	td {
 		/*width: 25%;*/
