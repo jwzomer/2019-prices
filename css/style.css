@@ -152,9 +152,11 @@ tfoot td {
 		align-self: center;
 	}
 	thead {
+		order: 0;
+	}
+	thead tr {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr );
-		order: 0;
 	}
 	tbody tr::after {
 		content: '';
