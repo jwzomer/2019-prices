@@ -201,6 +201,7 @@ tfoot td {
 	thead td,
 	tfoot td {
 		margin-bottom: 0;
+		padding-top: 0;
 	}
 	tbody td:not(:first-child) {
 		/*text-align: center;*/
