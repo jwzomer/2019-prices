@@ -158,6 +158,7 @@ tfoot td {
 		bottom: 0;
 		width: 80vw;
 		background: white;
+		z-index: 2;
 	}
 	thead {
 		padding-bottom: 2em;
