@@ -135,6 +135,9 @@ tfoot td {
 	}
 	table {
 		max-width: 600px;
+		display: flex;
+		flex-direction: column;
+		overflow-y: initial;
 	}
 	caption {
 		padding-left: .5rem;
@@ -143,12 +146,15 @@ tfoot td {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		order: 0;
 	}
 	caption span {
 		align-self: center;
 	}
 	thead {
-		display: none;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr );
+		order: 0;
 	}
 	tbody tr::after {
 		content: '';
@@ -229,7 +235,6 @@ tfoot td {
 	table {
 		max-width: 80vw;
 		margin-top: 5vh;
-		overflow-y: initial;
 	}
 	thead > tr, tbody > tr {
 		border-bottom: none;
