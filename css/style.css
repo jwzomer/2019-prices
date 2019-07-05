@@ -134,10 +134,12 @@ tfoot td {
 		padding: .25em;
 	}
 	table {
-		max-width: 600px;
+		/*max-width: 600px;*/
 		display: flex;
 		flex-direction: column;
-		overflow-y: initial;
+		/*overflow-y: initial;*/
+		max-width: 80vw;
+		margin-top: 5vh;
 	}
 	caption {
 		padding-left: .5rem;
@@ -164,6 +166,10 @@ tfoot td {
 	thead tr {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr );
+	}
+	tbody > tr {
+		border-bottom: none;
+		margin-top: 20vh;
 	}
 	tbody tr::after {
 		content: '';
@@ -231,15 +237,5 @@ tfoot td {
 		/*bottom: -.8em;
 		position: relative;*/
 		/*margin-top: -0.7em;*/
-	}
-}
-@media (max-width: 600px) {
-	table {
-		max-width: 80vw;
-		margin-top: 5vh;
-	}
-	tbody > tr {
-		border-bottom: none;
-		margin-top: 20vh;
 	}
 }
