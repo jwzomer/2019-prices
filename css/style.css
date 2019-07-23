@@ -105,6 +105,20 @@ tfoot td {
 .no::after {
 	margin-left: 20%;
 }
+@media (max-width: 1000px) and (min-width: 800px) {
+	tr#totals {
+		position: fixed;
+		bottom: 0;
+		left: 1rem;
+		right: 1rem;
+		background: white;
+		border-top: 3px solid #ddd;
+	}
+	tr#totals td {
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+}
 @media (min-width: 800px) {
 	caption {
 		max-width: 30ch;
