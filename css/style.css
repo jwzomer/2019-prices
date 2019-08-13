@@ -120,6 +120,9 @@ tfoot td {
 	}
 }
 @media (min-width: 800px) {
+	table {
+		scroll-snap-type: y mandatory;
+	}
 	caption {
 		max-width: 30ch;
 		margin-bottom: -3em;
