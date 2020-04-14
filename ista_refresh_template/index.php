@@ -1,45 +1,21 @@
 <!DOCTYPE html>
-<?php
-	include('includes/config.php');	
-	include('includes/functions.php');	
-?>
 <html lang="en">
 	<head>
-		<title><?=($title!=''?$title." - ".$org_name:$org_name)?></title>
-		<meta name="keywords" content="<?=$keywords?>" />
-		<meta name="description" content="<?=$description?>" />
+        <title>Template</title>
+        
+		<meta name="description" content="Modern template" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<link rel="icon" href="<?=$base;?>images/favicon.png" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="<?=$base;?>bootstrap/css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="<?=$base;?>_jquery/css/custom-theme/jquery-ui-1.9.2.custom.min.css" />
-		<link rel="stylesheet" type="text/css" href="<?=$base;?>_jquery/css/jquery.ui.potato.menu.css" />
-		<link rel="stylesheet" type="text/css" href="<?=$base;?>_jquery/css/fullcalendar.css" />
-		<link rel="stylesheet" type="text/css" href="<?=$base;?>_jquery/css/fullcalendar.print.css" media="print" />
-		<script type="text/javascript" src="<?=$base;?>_jquery/js/jquery-1.10.1.min.js"></script>
-		<script type="text/javascript" src="<?=$base;?>_jquery/js/jquery-migrate-1.2.1.min.js"></script>
-		<script type="text/javascript" src="<?=$base;?>_jquery/js/jquery-ui-1.9.2.custom.min.js"></script>
-		<script type="text/javascript" src="<?=$base;?>_jquery/js/jquery.jpanelmenu.min.js"></script>
-		<script src="//memberleap.com/_jquery/fullcalendar-1.5.3/fullcalendar/fullcalendar.min.js"></script>
-		<!-- Google ReCaptcha -->
-		<script src='https://www.google.com/recaptcha/api.js'></script>
-		
-		<script type="text/javascript" src="<?=$base;?>_jquery/js/fullcalendar.min.js"></script>
-		<script type="text/javascript" src="<?=$base;?>bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="<?=$base;?>_jquery/js/_custom.js"></script>
-		<link href="https://www.viethconsulting.com/_jquery/nivo/nivo-slider.css" media="screen" rel="stylesheet" type="text/css">
-		
-		<!-- Jake jquery bits -->
-		<?=$alinclude;?>
-		<!-- Google fonts -->
+        <link rel="icon" href="images/favicon.png" type="image/x-icon">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-1.10.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-		<!-- ^^ Enter this in config.php -->
-		
-		<!-- Our style sheets -->
-		<!--##MH5INJECTS-->
-		<!-- ^^This injects MMS specific styles -->
-		<link rel="stylesheet" type="text/css" href="<?=$base;?>css/refresh-styles.css?combobreaker=<? echo rand();?>" />
+
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		
 	</head>
 	<body>
@@ -53,19 +29,16 @@
 						<h4 class="modal-title" id="login-modal-label">Member Area Log In</h4>
 					</div>
 					<div class="modal-body">
-						
 						<div id="login">
-							<form action="https://mms.ista.org/members/gateway.php" method="post">
-							<input type="hidden" name="org_id" value="ISTA">
-							<div>
-							<input name="Username" type="text" placeholder="Username" class="">
-							</div><div>
-							<input name="Password" type="password" placeholder="Password" class="">
-							</div>
-							<a class="" href="http://ista.org/forgot_pwd.php">Forgot Password?</a>
-							<input type="submit" value="Sign In" class="">
-							
-							
+							<form action="" method="post">
+                                <div>
+                                    <input name="Username" type="text" placeholder="Username" class="">
+                                </div>
+                                <div>
+                                    <input name="Password" type="password" placeholder="Password" class="">
+                                </div>
+                                <a class="" href="#">Forgot Password?</a>
+                                <input type="submit" value="Sign In" class="">							
 							</form>
 						</div>
 					</div>
@@ -76,7 +49,7 @@
 			<div class="wrapper">
 				<nav id="nav_menu">
 					<ul >
-						<li><a href="<?=$base;?>"><?php include('images/logo.svg');?></a></li>
+						<li><a href="index.html"><img src="images/logo.svg" alt="Logo"></a></li>
 						<li><a href="#">Join<b class="caret"></b></a></li>
 						<li><a href="#">Testing<b class="caret"></b></a></li>
 						<li><a href="#">Education<b class="caret"></b></a></li>
@@ -85,12 +58,15 @@
 						<li><a href="#">Store</a></li>
 						<li class="login-item"><a role="button" href="#" data-toggle="modal" data-target="#login-modal">Member Area</a></li>
 						<li class="search-item">
-							<?php 
-								$search_options = array (
-									'placeholder'	=> 'Search'
-								);
-								echo search_box($search_options);
-                            ?>
+                            <form id="searchbox" action="">
+                
+                                <!-- <input value="011809122686868931375:ku-90sloykk" name="cx" type="hidden">
+                                <input value="FORID:11" name="cof" type="hidden"> -->
+                                
+                                <input id="q" name="q" type="search" class="search-input " placeholder="Search">
+                                <input value="" name="sa" class="search-button" type="submit">
+                            
+                            </form>
 						</li>
 					</ul>
 				</nav>
@@ -289,7 +265,6 @@
                         }
                     });
 
-                    //Contact banner disappear at page bottom
 
 
 
@@ -337,18 +312,18 @@
 							<li>
 								<ul class="social-media">
 									<li>
-										<a href="https://www.linkedin.com/company/ista-international-safe-transit-association-?trk=top_nav_home" target="_blank">
-											<?php include('images/linkedin.svg');?>
+										<a href="#" target="_blank">
+                                            <img src="images/linkedin.svg" alt="LinkedIn icon">
 										</a>
 									</li>
 									<li>
-										<a href="https://twitter.com/ISTAmatters" target="_blank">
-											<?php include('images/twitter.svg');?>
+										<a href="#" target="_blank">
+                                            <img src="images/twitter.svg" alt="Twitter icon">
 										</a>
                                     </li>
                                     <li>
-                                        <a href="mailto:ista@ista.org">
-                                            <?php include('images/mail-icon.svg');?>
+                                        <a href="mailto:">
+                                            <img src="images/mail-icon.svg" alt="Email icon">
                                         </a>
                                     </li>
 								</ul>
@@ -366,7 +341,7 @@
 			</nav>
 			<div class="wrapper">
 				<span>
-					&copy; <?=date('Y');?> <?=$org_name;?>. All rights reserved. Website powered by <a href="https://www.memberleap.com" target="_blank">MemberLeap.</a>
+					&copy; 2020 Sample Company. All rights reserved. Website created by <a href="#" target="_blank">John Zomer.</a>
 				</span>
 
 			</div>
@@ -380,18 +355,18 @@
                         <a href="#" class="button-link">Email sign up</a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/company/ista-international-safe-transit-association-?trk=top_nav_home" target="_blank">
-                            <?php include('images/linkedin.svg');?>
+                        <a href="#" target="_blank">
+                            <img src="images/linkedin.svg" alt="LinkedIn icon">
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/ISTAmatters" target="_blank">
-                            <?php include('images/twitter.svg');?>
+                        <a href="#" target="_blank">
+                            <img src="images/twitter.svg" alt="Twitter icon">
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:ista@ista.org">
-                            <?php include('images/mail-icon.svg');?>
+                        <a href="mailto:">
+                            <img src="images/mail-icon.svg" alt="Email icon">
                         </a>
                     </li>
                 </ul>
